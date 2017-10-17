@@ -1,6 +1,12 @@
 FROM tesseractshadow/tesseract4re
 
-RUN apt-get update && apt-get install -y build-essential ruby-full libffi-dev libgmp3-dev ruby-dev
+RUN apt-get update && apt-get install -y \
+        build-essential \
+        ruby-full \
+        libffi-dev \
+        libgmp3-dev \
+        ruby-dev \
+        imagemagick
 
 WORKDIR /home/work
 
@@ -11,6 +17,7 @@ COPY Gemfile .
 RUN bundle install
 
 COPY . /home/work
+ENV PATH /home/work/:$PATH
 
 EXPOSE 8080
 
