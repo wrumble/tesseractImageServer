@@ -6,6 +6,9 @@ require 'json'
 require 'fileutils'
 require 'tempfile'
 require "base64"
+require 'puma_worker_killer'
+
+PumaWorkerKiller.enable_rolling_restart
 
 set :protection, except: [ :json_csrf ]
 port = ENV['PORT'] || 8080
@@ -25,5 +28,5 @@ post '/extractText' do
     return "Error reading image"
   end
   status 200
-  return output.to_json
+  return output
 end
