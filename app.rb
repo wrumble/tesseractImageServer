@@ -18,7 +18,7 @@ set :bind, '0.0.0.0'
 post '/extractText' do
   begin
     bas64Image = Base64.decode64(params[:image])
-    imageFile = Tempfile.new(['image', '.jpg'])
+    imageFile = Tempfile.new(['image', '.png'])
     imageFile.write(bas64Image)
     imageFile.close
     `textcleaner #{imageFile.path} #{imageFile.path}`
