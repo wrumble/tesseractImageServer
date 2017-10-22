@@ -24,7 +24,7 @@ post '/extractText' do
     p "deskew"
     `textdeskew #{imageFile.path} #{imageFile.path}`
     p "clean"
-    `textcleaner #{imageFile.path} #{imageFile.path}`
+    `textcleaner -u -T #{imageFile.path} #{imageFile.path}`
     p "extract"
     output = `tesseract #{imageFile.path} --psm 6 stdout`
     p output
