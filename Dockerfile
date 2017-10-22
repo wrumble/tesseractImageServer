@@ -6,7 +6,13 @@ RUN apt-get update && apt-get install -y \
         libffi-dev \
         libgmp3-dev \
         ruby-dev \
-        imagemagick
+        fftw-dev \
+        libjpeg62-dev \
+        libjpeg8-dev \
+        libfftw3-3 \
+        libfftw3-dev
+
+RUN apt-get source imagemagick
 
 WORKDIR /home/work
 
