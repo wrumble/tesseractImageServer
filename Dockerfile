@@ -11,8 +11,8 @@ WORKDIR /home/work
 COPY . /home/work
 
 RUN cd ImageMagick-7.0.7-8
-RUN chmod +x configure
-RUN ./configure
+RUN chmod +x configure.sh
+RUN ./configure.sh
 RUN make
 RUN make install
 RUN ldconfig /usr/local/lib
