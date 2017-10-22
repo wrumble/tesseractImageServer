@@ -47,9 +47,7 @@
 #endif
 
 /* Define if you have DJVU library */
-#ifndef MAGICKCORE_DJVU_DELEGATE
-#define MAGICKCORE_DJVU_DELEGATE 1
-#endif
+/* #undef DJVU_DELEGATE */
 
 /* Directory where ImageMagick documents live. */
 #ifndef MAGICKCORE_DOCUMENTATION_PATH
@@ -68,9 +66,7 @@
 #endif
 
 /* Define if you have FFTW library */
-#ifndef MAGICKCORE_FFTW_DELEGATE
-#define MAGICKCORE_FFTW_DELEGATE 1
-#endif
+/* #undef FFTW_DELEGATE */
 
 /* filter subdirectory. */
 #ifndef MAGICKCORE_FILTER_DIRNAME
@@ -81,9 +77,7 @@
 /* #undef FLIF_DELEGATE */
 
 /* Define if you have FONTCONFIG library */
-#ifndef MAGICKCORE_FONTCONFIG_DELEGATE
-#define MAGICKCORE_FONTCONFIG_DELEGATE 1
-#endif
+/* #undef FONTCONFIG_DELEGATE */
 
 /* Define if you have FlashPIX library */
 /* #undef FPX_DELEGATE */
@@ -211,7 +205,7 @@
 /* Define to 1 if you have the declaration of `strlcpy', and to 0 if you
    don't. */
 #ifndef MAGICKCORE_HAVE_DECL_STRLCPY
-#define MAGICKCORE_HAVE_DECL_STRLCPY 0
+#define MAGICKCORE_HAVE_DECL_STRLCPY 1
 #endif
 
 /* Define to 1 if you have the declaration of `tzname', and to 0 if you don't.
@@ -383,9 +377,7 @@
 #endif
 
 /* Define if you have the <lcms2.h> header file. */
-#ifndef MAGICKCORE_HAVE_LCMS2_H
-#define MAGICKCORE_HAVE_LCMS2_H 1
-#endif
+/* #undef HAVE_LCMS2_H */
 
 /* Define if you have the <lcms2/lcms2.h> header file. */
 /* #undef HAVE_LCMS2_LCMS2_H */
@@ -399,9 +391,7 @@
 #endif
 
 /* Define to 1 if you have the <linux/unistd.h> header file. */
-#ifndef MAGICKCORE_HAVE_LINUX_UNISTD_H
-#define MAGICKCORE_HAVE_LINUX_UNISTD_H 1
-#endif
+/* #undef HAVE_LINUX_UNISTD_H */
 
 /* Define to 1 if you have the `lltostr' function. */
 /* #undef HAVE_LLTOSTR */
@@ -443,10 +433,14 @@
 #endif
 
 /* Define to 1 if you have the <machine/param.h> header file. */
-/* #undef HAVE_MACHINE_PARAM_H */
+#ifndef MAGICKCORE_HAVE_MACHINE_PARAM_H
+#define MAGICKCORE_HAVE_MACHINE_PARAM_H 1
+#endif
 
 /* Define to 1 if you have the <mach-o/dyld.h> header file. */
-/* #undef HAVE_MACH_O_DYLD_H */
+#ifndef MAGICKCORE_HAVE_MACH_O_DYLD_H
+#define MAGICKCORE_HAVE_MACH_O_DYLD_H 1
+#endif
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
 #ifndef MAGICKCORE_HAVE_MBSTATE_T
@@ -512,7 +506,9 @@
 #endif
 
 /* Define to 1 if you have the <OpenCL/cl.h> header file. */
-/* #undef HAVE_OPENCL_CL_H */
+#ifndef MAGICKCORE_HAVE_OPENCL_CL_H
+#define MAGICKCORE_HAVE_OPENCL_CL_H 1
+#endif
 
 /* Define to 1 if you have the <OS.h> header file. */
 /* #undef HAVE_OS_H */
@@ -533,14 +529,10 @@
 #endif
 
 /* Define to 1 if you have the `posix_fadvise' function. */
-#ifndef MAGICKCORE_HAVE_POSIX_FADVISE
-#define MAGICKCORE_HAVE_POSIX_FADVISE 1
-#endif
+/* #undef HAVE_POSIX_FADVISE */
 
 /* Define to 1 if you have the `posix_fallocate' function. */
-#ifndef MAGICKCORE_HAVE_POSIX_FALLOCATE
-#define MAGICKCORE_HAVE_POSIX_FALLOCATE 1
-#endif
+/* #undef HAVE_POSIX_FALLOCATE */
 
 /* Define to 1 if you have the `posix_madvise' function. */
 #ifndef MAGICKCORE_HAVE_POSIX_MADVISE
@@ -636,14 +628,10 @@
 #endif
 
 /* X11 server supports shape extension */
-#ifndef MAGICKCORE_HAVE_SHAPE
-#define MAGICKCORE_HAVE_SHAPE 1
-#endif
+/* #undef HAVE_SHAPE */
 
 /* X11 server supports shared memory extension */
-#ifndef MAGICKCORE_HAVE_SHARED_MEMORY
-#define MAGICKCORE_HAVE_SHARED_MEMORY 1
-#endif
+/* #undef HAVE_SHARED_MEMORY */
 
 /* Define to 1 if you have the `sigaction' function. */
 #ifndef MAGICKCORE_HAVE_SIGACTION
@@ -744,10 +732,14 @@
 #endif
 
 /* Define to 1 if you have the `strlcat' function. */
-/* #undef HAVE_STRLCAT */
+#ifndef MAGICKCORE_HAVE_STRLCAT
+#define MAGICKCORE_HAVE_STRLCAT 1
+#endif
 
 /* Define to 1 if you have the `strlcpy' function. */
-/* #undef HAVE_STRLCPY */
+#ifndef MAGICKCORE_HAVE_STRLCPY
+#define MAGICKCORE_HAVE_STRLCPY 1
+#endif
 
 /* Define to 1 if you have the `strncasecmp' function. */
 #ifndef MAGICKCORE_HAVE_STRNCASECMP
@@ -846,9 +838,7 @@
 #endif
 
 /* Define to 1 if you have the <sys/sendfile.h> header file. */
-#ifndef MAGICKCORE_HAVE_SYS_SENDFILE_H
-#define MAGICKCORE_HAVE_SYS_SENDFILE_H 1
-#endif
+/* #undef HAVE_SYS_SENDFILE_H */
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
 #ifndef MAGICKCORE_HAVE_SYS_SOCKET_H
@@ -861,7 +851,9 @@
 #endif
 
 /* Define to 1 if you have the <sys/syslimits.h> header file. */
-/* #undef HAVE_SYS_SYSLIMITS_H */
+#ifndef MAGICKCORE_HAVE_SYS_SYSLIMITS_H
+#define MAGICKCORE_HAVE_SYS_SYSLIMITS_H 1
+#endif
 
 /* Define to 1 if you have the <sys/timeb.h> header file. */
 #ifndef MAGICKCORE_HAVE_SYS_TIMEB_H
@@ -1015,7 +1007,9 @@
 #endif
 
 /* Define to 1 if you have the `vfprintf_l' function. */
-/* #undef HAVE_VFPRINTF_L */
+#ifndef MAGICKCORE_HAVE_VFPRINTF_L
+#define MAGICKCORE_HAVE_VFPRINTF_L 1
+#endif
 
 /* Define to 1 if you have the `vprintf' function. */
 #ifndef MAGICKCORE_HAVE_VPRINTF
@@ -1028,7 +1022,9 @@
 #endif
 
 /* Define to 1 if you have the `vsnprintf_l' function. */
-/* #undef HAVE_VSNPRINTF_L */
+#ifndef MAGICKCORE_HAVE_VSNPRINTF_L
+#define MAGICKCORE_HAVE_VSNPRINTF_L 1
+#endif
 
 /* Define to 1 if you have the `vsprintf' function. */
 #ifndef MAGICKCORE_HAVE_VSPRINTF
@@ -1077,7 +1073,9 @@
 #endif
 
 /* Define to 1 if you have the `_NSGetExecutablePath' function. */
-/* #undef HAVE__NSGETEXECUTABLEPATH */
+#ifndef MAGICKCORE_HAVE__NSGETEXECUTABLEPATH
+#define MAGICKCORE_HAVE__NSGETEXECUTABLEPATH 1
+#endif
 
 /* Define to 1 if you have the `_pclose' function. */
 /* #undef HAVE__PCLOSE */
@@ -1123,9 +1121,7 @@
 #endif
 
 /* Define if you have JBIG library */
-#ifndef MAGICKCORE_JBIG_DELEGATE
-#define MAGICKCORE_JBIG_DELEGATE 1
-#endif
+/* #undef JBIG_DELEGATE */
 
 /* Define if you have JPEG library */
 #ifndef MAGICKCORE_JPEG_DELEGATE
@@ -1133,9 +1129,7 @@
 #endif
 
 /* Define if you have LCMS library */
-#ifndef MAGICKCORE_LCMS_DELEGATE
-#define MAGICKCORE_LCMS_DELEGATE 1
-#endif
+/* #undef LCMS_DELEGATE */
 
 /* Define if you have OPENJP2 library */
 /* #undef LIBOPENJP2_DELEGATE */
@@ -1183,12 +1177,12 @@
 
 /* Target Host OS */
 #ifndef MAGICKCORE_MAGICK_TARGET_OS
-#define MAGICKCORE_MAGICK_TARGET_OS linux-gnu
+#define MAGICKCORE_MAGICK_TARGET_OS darwin16.7.0
 #endif
 
 /* Target Host Vendor */
 #ifndef MAGICKCORE_MAGICK_TARGET_VENDOR
-#define MAGICKCORE_MAGICK_TARGET_VENDOR pc
+#define MAGICKCORE_MAGICK_TARGET_VENDOR apple
 #endif
 
 /* Module directory name without ABI part. */
@@ -1206,9 +1200,7 @@
 /* #undef NDEBUG */
 
 /* Define if you have OPENEXR library */
-#ifndef MAGICKCORE_OPENEXR_DELEGATE
-#define MAGICKCORE_OPENEXR_DELEGATE 1
-#endif
+/* #undef OPENEXR_DELEGATE */
 
 /* Name of package */
 #ifndef MAGICKCORE_PACKAGE
@@ -1246,14 +1238,10 @@
 #endif
 
 /* Define if you have PANGOCAIRO library */
-#ifndef MAGICKCORE_PANGOCAIRO_DELEGATE
-#define MAGICKCORE_PANGOCAIRO_DELEGATE 1
-#endif
+/* #undef PANGOCAIRO_DELEGATE */
 
 /* Define if you have PANGO library */
-#ifndef MAGICKCORE_PANGO_DELEGATE
-#define MAGICKCORE_PANGO_DELEGATE 1
-#endif
+/* #undef PANGO_DELEGATE */
 
 /* enable pipes (|) in filenames */
 /* #undef PIPES_SUPPORT */
@@ -1279,9 +1267,7 @@
 /* #undef RAQM_DELEGATE */
 
 /* Define if you have LIBRAW library */
-#ifndef MAGICKCORE_RAW_R_DELEGATE
-#define MAGICKCORE_RAW_R_DELEGATE 1
-#endif
+/* #undef RAW_R_DELEGATE */
 
 /* Define as the return type of signal handlers (`int' or `void'). */
 #ifndef MAGICKCORE_RETSIGTYPE
@@ -1419,9 +1405,7 @@
 #endif
 
 /* Define to 1 if strerror_r returns char *. */
-#ifndef MAGICKCORE_STRERROR_R_CHAR_P
-#define MAGICKCORE_STRERROR_R_CHAR_P 1
-#endif
+/* #undef STRERROR_R_CHAR_P */
 
 /* Define if you have POSIX threads libraries and header files. */
 #ifndef MAGICKCORE_THREAD_SUPPORT
@@ -1469,9 +1453,7 @@
 #endif
 
 /* Define if you have WEBP library */
-#ifndef MAGICKCORE_WEBP_DELEGATE
-#define MAGICKCORE_WEBP_DELEGATE 1
-#endif
+/* #undef WEBP_DELEGATE */
 
 /* Define to use the Windows GDI32 library */
 /* #undef WINGDI32_DELEGATE */
@@ -1480,9 +1462,7 @@
 /* #undef WITH_DMALLOC */
 
 /* Define if you have WMF library */
-#ifndef MAGICKCORE_WMF_DELEGATE
-#define MAGICKCORE_WMF_DELEGATE 1
-#endif
+/* #undef WMF_DELEGATE */
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */
@@ -1502,9 +1482,7 @@
 #endif
 
 /* Define if you have X11 library */
-#ifndef MAGICKCORE_X11_DELEGATE
-#define MAGICKCORE_X11_DELEGATE 1
-#endif
+/* #undef X11_DELEGATE */
 
 /* Define if you have XML library */
 #ifndef MAGICKCORE_XML_DELEGATE
@@ -1512,7 +1490,9 @@
 #endif
 
 /* Define to 1 if the X Window System is missing or not being used. */
-/* #undef X_DISPLAY_MISSING */
+#ifndef MAGICKCORE_X_DISPLAY_MISSING
+#define MAGICKCORE_X_DISPLAY_MISSING 1
+#endif
 
 /* Build self-contained, embeddable, zero-configuration ImageMagick */
 /* #undef ZERO_CONFIGURATION_SUPPORT */

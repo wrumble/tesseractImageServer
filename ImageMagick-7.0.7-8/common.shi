@@ -1,0 +1,22 @@
+# Test environment
+top_srcdir='/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8'
+top_builddir='/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8'
+
+set -a
+COMPARE="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick compare"
+COMPOSITE="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick composite"
+CONJURE="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick conjure"
+CONVERT="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick convert"
+DISPLAY="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick display"
+IDENTIFY="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick identify"
+MAGICK="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick"
+MONTAGE="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities/magick montage"
+VALIDATE="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/tests/validate"
+DRAWTEST="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/tests/drawtest"
+WANDTEST="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/tests/wandtest"
+LD_LIBRARY_PATH="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/coders"
+MAGICK_CONFIGURE_PATH="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/config:/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/config"
+MAGICK_FILTER_MODULE_PATH="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/filters"
+PATH="/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/utilities:/Users/wayne.rumble/Desktop/ImageMagick-7.0.7-8/tests:${PATH}"
+set +a

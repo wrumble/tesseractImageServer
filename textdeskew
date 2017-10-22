@@ -129,7 +129,7 @@ padval=""			# pad amount
 
 # set internal arguments
 res_thresh=2		# threshold on residuals to filter points and refine regression
-debug="false"		# show debug information
+debug="true"		# show debug information
 
 # set directory for temporary files
 tmpdir="." 		# suggestions are tmpdir="." or tmpdir="/tmp"

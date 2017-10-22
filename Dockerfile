@@ -1,21 +1,16 @@
+
 FROM tesseractshadow/tesseract4re
 
 RUN apt-get update && apt-get install -y \
         build-essential \
         ruby-full \
+        libgs-dev \
         libffi-dev \
         libgmp3-dev \
-        ruby-dev
+        ruby-dev \
+        imagemagick
 
 WORKDIR /home/work
-COPY . /home/work
-
-RUN cd ImageMagick-7.0.7-8
-RUN chmod +x configure.sh
-RUN ./configure.sh
-RUN make
-RUN make install
-RUN ldconfig /usr/local/lib
 
 RUN gem install bundler
 
@@ -23,7 +18,7 @@ COPY Gemfile .
 
 RUN bundle install
 
-
+COPY . /home/work
 ENV PATH /home/work/:$PATH
 
 EXPOSE 8080
