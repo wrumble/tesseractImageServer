@@ -21,8 +21,13 @@ post '/extractText' do
     imageFile = Tempfile.new(['image', '.png'])
     imageFile.write(bas64Image)
     imageFile.close
+    p "deskew"
+    `textdeskew #{imageFile.path} #{imageFile.path}`
+    p "clean"
     `textcleaner #{imageFile.path} #{imageFile.path}`
+    p "extract"
     output = `tesseract #{imageFile.path} --psm 6 stdout`
+    p output
   rescue
     status 402
     return "Error reading image"
