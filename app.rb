@@ -21,7 +21,7 @@ post '/extractText' do
     imageFile = Tempfile.new(['image', '.png'])
     imageFile.write(bas64Image)
     imageFile.close
-    `textcleaner -e -u #{imageFile.path} #{imageFile.path}`
+    `textcleaner -e stretch -u #{imageFile.path} #{imageFile.path}`
     # `textdeskew #{imageFile.path} #{imageFile.path}`
     output = `tesseract #{imageFile.path} --psm 6 stdout`
     p output
