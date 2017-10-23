@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y \
         libffi-dev \
         libgmp3-dev \
         ruby-dev \
-        imagemagick
+        imagemagick \
+        bc \
+        gawk
 
 WORKDIR /home/work
 
