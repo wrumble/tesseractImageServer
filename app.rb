@@ -21,9 +21,9 @@ post '/extractText' do
     imageFile = Tempfile.new(['image', '.png'])
     imageFile.write(bas64Image)
     imageFile.close
-    `textcleaner -e stretch -u #{imageFile.path} #{imageFile.path}`
+    `textcleaner #{imageFile.path} #{imageFile.path}`
     # `textdeskew #{imageFile.path} #{imageFile.path}`
-    output = `tesseract #{imageFile.path} --psm 6 stdout`
+    output = `tesseract #{imageFile.path} --psm 6 --oem 2 stdout`
     p output
   rescue
     status 402
