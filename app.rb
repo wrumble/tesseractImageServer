@@ -22,7 +22,7 @@ post '/extractText' do
     imageFile.write(bas64Image)
     imageFile.close
     `textcleaner #{imageFile.path} #{imageFile.path}`
-    # `textdeskew #{imageFile.path} #{imageFile.path}`
+    `textdeskew #{imageFile.path} #{imageFile.path}`
     output = `tesseract #{imageFile.path} --psm 6 stdout`
     p output
   rescue
