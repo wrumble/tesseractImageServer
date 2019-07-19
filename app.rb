@@ -22,8 +22,8 @@ post '/extractText' do
     imageFile.write(bas64Image)
     imageFile.close
     `textcleaner #{imageFile.path} #{imageFile.path}`
-    # `textdeskew #{imageFile.path} #{imageFile.path}`
-    output = `tesseract #{imageFile.path} --psm 6 --oem 2 stdout`
+    #`textdeskew #{imageFile.path} #{imageFile.path}`
+    output = `tesseract #{imageFile.path} stdout --oem 1 --psm 6`
     p output
   rescue
     status 402
